@@ -2,19 +2,19 @@
 
 ## Things you will Learn 🤯
 
-1. Python and How to create Monitoring Application in Python using Flask and psutil
+1. Python and How to create Monitoring Application in Python using Flask and psutil.
 2. How to run a Python App locally.
-3. Learn Docker and How to containerize a Python application
-    1. Creating Dockerfile
-    2. Building DockerImage
-    3. Running Docker Container
-    4. Docker Commands
-4. Create ECR repository using Python Boto3 and pushing Docker Image to ECR
-5. Learn Kubernetes and Create EKS cluster and Nodegroups
-6. Create Kubernetes Deployments and Services using Python!
+3. Learn Docker and How to containerize a Python application.
+    - Creating Dockerfile
+    - Building DockerImage
+    - Running Docker Container
+    - Docker Commands
+4. Create ECR repository using Python Boto3 and pushing Docker Image to ECR.
+5. Learn Kubernetes and Create EKS cluster and Nodegroups.
+6. Create Kubernetes Deployments and Services using Python.
 
 
-## **Prerequisites** !
+## **Prerequisites**  📋
 
 (Things to have before starting the projects)
 
@@ -33,7 +33,7 @@
 Clone the code from the repository:
 
 ```
-git clone <repository_url>
+git clone https://github.com/Daoud-Hussain/Cloud-Native-Monitoring.git
 ```
 
 ### **Step 2: Install dependencies**
@@ -218,3 +218,15 @@ Once your pod is up and running, run the port-forward to expose the service
 ```bash
 kubectl port-forward service/<service_name> 5000:5000
 ```
+## Contributing 🖇️
+
+Pull requests are welcome for any changes.
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Author 🙋‍♂
+
+- [Daoud Hussain](https://www.linkedin.com/in/daoud-hussain/) on LinkedIn.
+- You Can also check out my [Medium](https://medium.com/@dev.daoudhussain) for articles on DevOps Tools and Technologies.️
