@@ -2,19 +2,21 @@
 
 ## Things you will Learn 🤯
 
-1. Python and How to create Monitoring Application in Python using Flask and psutil.
+1. Python and How to create Monitoring Application in Python using 'Flask' and 'psutil'.
 2. How to run a Python App locally.
 3. Learn Docker and How to containerize a Python application.
-    - Creating Dockerfile
-    - Building DockerImage
-    - Running Docker Container
-    - Docker Commands
-4. Create ECR repository using Python Boto3 and pushing Docker Image to ECR.
+    - Creating Dockerfile.
+    - Building DockerImage.
+    - Running Docker Container.
+    - Docker Commands.
+4. Create ECR repository using Python 'Boto3' and pushing Docker Image to ECR.
 5. Learn Kubernetes and Create EKS cluster and Nodegroups.
 6. Create Kubernetes Deployments and Services using Python.
 
+## Architecture Diagram 📌
+<img src="Steps/diagram.png">
 
-## **Prerequisites**  📋
+## **Prerequisites** 📋
 
 (Things to have before starting the projects)
 
@@ -107,7 +109,8 @@ This will start the Flask server in a Docker container on **`localhost:5000`**. 
 
 ### **Step 1: Create an ECR repository**
 
-Create an ECR repository using Python:
+You can create an ECR repository programmatically using Python `Boto3`. Boto3 is the name of the Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts. You can do it manually using Amazon ECR service.
+
 
 ```
 import boto3
@@ -132,15 +135,34 @@ Push the Docker image to ECR using the push commands on the console:
 docker push <ecr_repo_uri>:<tag>
 ```
 
+<img src="Steps/10.png">
+
 ## **Part 4: Creating an EKS cluster and deploying the app using Python**
 
 ### **Step 1: Create an EKS cluster**
 
 Create an EKS cluster and add node group
 
+<img src="Steps/11.png">
+<img src="Steps/12.png">
+<img src="Steps/13.png">
+<img src="Steps/14.png">
+<img src="Steps/15.png">
+<img src="Steps/16.png">
+<img src="Steps/17.png">
+<img src="Steps/18.png">
+<img src="Steps/19.png">
+
 ### **Step 2: Create a node group**
 
 Create a node group in the EKS cluster.
+
+<img src="Steps/20.png">
+<img src="Steps/21.png">
+<img src="Steps/22.png">
+<img src="Steps/23.png">
+<img src="Steps/24.png">
+<img src="Steps/25.png">
 
 ### **Step 3: Create deployment and service**
 
@@ -169,7 +191,7 @@ deployment = client.V1Deployment(
                 containers=[
                     client.V1Container(
                         name="my-flask-container",
-                        image="568373317874.dkr.ecr.us-east-1.amazonaws.com/my-cloud-native-repo:latest",
+                        image="public.ecr.aws/r3n6z2g2/my_monitoring_app_image:latest",
                         ports=[client.V1ContainerPort(container_port=5000)]
                     )
                 ]
@@ -218,13 +240,15 @@ Once your pod is up and running, run the port-forward to expose the service
 ```bash
 kubectl port-forward service/<service_name> 5000:5000
 ```
+
+## Output 📌
+<img src="Steps/output.png">
+<img src="Steps/output2.png">
+
 ## Contributing 🖇️
 
 Pull requests are welcome for any changes.
 
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Author 🙋‍♂
 
