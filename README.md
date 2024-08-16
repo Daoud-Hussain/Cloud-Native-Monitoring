@@ -2,7 +2,7 @@
 
 ## Things you will Learn 🤯
 
-1. Python and How to create Monitoring Application in Python using 'Flask' and 'psutil'.
+1. Python and How to create Monitoring Application in Python using **Flask** and **psutil**.
 2. How to run a Python App locally.
 3. Learn Docker and How to containerize a Python application.
     - Creating Dockerfile.
@@ -148,7 +148,6 @@ Create an EKS cluster and add node group
 <img src="Steps/13.png">
 <img src="Steps/14.png">
 <img src="Steps/15.png">
-<img src="Steps/16.png">
 <img src="Steps/17.png">
 <img src="Steps/18.png">
 <img src="Steps/19.png">
@@ -165,6 +164,7 @@ Create a node group in the EKS cluster.
 <img src="Steps/25.png">
 
 ### **Step 3: Create deployment and service**
+In Kubernetes, a **Deployment** manages the creation and scaling of pods, ensuring the desired number are running, while a **Service** exposes the deployed pods to external or internal network traffic, enabling communication between components.
 
 ```jsx
 from kubernetes import client, config
@@ -224,7 +224,7 @@ api_instance.create_namespaced_service(
 )
 ```
 
-make sure to edit the name of the image on line 25 with your image Uri.
+Make sure to edit the name of the image on line 26 with your image Uri.
 
 - Once you run this file by running “python3 eks.py” deployment and service will be created.
 - Check by running following commands:
